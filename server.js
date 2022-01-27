@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const authRouter = require('./routes/auth')
 
 const dotenv = require('dotenv');
 dotenv.config()
@@ -15,6 +16,9 @@ mongoose.connect(process.env.MONGO_URL, {
 
 // MIDDLEWARE
 app.use(express.json())
+
+// routes
+app.use('/auth', authRouter)
 
 const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
