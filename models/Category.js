@@ -7,7 +7,7 @@ const catSchema = new mongoose.Schema({
         unique: true
     }
 }, {
-    timestamp: true
+    timestamps: true
 })
 
 // module.exports = mongoose.model('Category', catSchema)
