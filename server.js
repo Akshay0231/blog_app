@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const authRouter = require('./routes/auth')
+const userRouter = require('./routes/users')
 
 const dotenv = require('dotenv');
 dotenv.config()
@@ -19,6 +20,7 @@ app.use(express.json())
 
 // routes
 app.use('/auth', authRouter)
+app.use('/user', userRouter)
 
 const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
