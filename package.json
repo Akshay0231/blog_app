@@ -14,7 +14,7 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^14.3.2",
     "express": "^4.17.3",
-    "mongoose": ">=6.11.3"
+    "mongoose": ">=7.6.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
